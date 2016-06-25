@@ -126,8 +126,7 @@
 /* define if your compiler has __sync_val_compare_and_swap */
 #undef HAVE___SYNC_VAL_COMPARE_AND_SWAP
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
 #undef LT_OBJDIR
 
 /* Name of package */
@@ -178,12 +177,3 @@
 
 /* Puts following code inside the Google namespace */
 #undef _START_GOOGLE_NAMESPACE_
-
-// Annoying stuff for windows -- makes sure clients can import these functions
-#ifndef GOOGLE_GLOG_DLL_DECL
-# if defined(_WIN32) && !defined(__CYGWIN__)
-#   define GOOGLE_GLOG_DLL_DECL  __declspec(dllimport)
-# else
-#   define GOOGLE_GLOG_DLL_DECL
-# endif
-#endif
